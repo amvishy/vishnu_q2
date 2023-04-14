@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Full Name</title>
+  </head>
+  <body>
+    <label for="first-name">First Name:</label>
+    <input type="text" id="first-name" />
+    <br />
+    <label for="last-name">Last Name:</label>
+    <input type="text" id="last-name" />
+    <br />
+    <button onclick="showFullName()">Show Full Name</button>
+    <p id="full-name"></p>
+
+    <script>
+      function showFullName() {
+        const firstName = document.getElementById("first-name").value;
+        const lastName = document.getElementById("last-name").value;
+        const fullName = `${firstName} ${lastName}`;
+        document.getElementById("full-name").textContent = fullName;
+      }
+    </script>
+  </body>
+</html>
